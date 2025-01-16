@@ -2,12 +2,9 @@ context:
   name: wagtail-draftail-plugins
   version: "0.3.1"
 
-{% set name = "wagtail-draftail-plugins" %}
-{% set version = "0.3.1" %}
-
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: wagtail-draftail-plugins
+  version: ${{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wagtail_draftail_plugins-{{ version }}.tar.gz
