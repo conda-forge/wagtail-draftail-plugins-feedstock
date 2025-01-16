@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}
     - pip
     - setuptools
     - versiontag >=1.2.0
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - wagtail >=4.0
 
 tests:
@@ -34,7 +34,7 @@ tests:
   - requirements:
       run:
         - pip
-        - python {{ python_min }}
+        - python ${{ python_min }}
     script: pip check
 
 about:
