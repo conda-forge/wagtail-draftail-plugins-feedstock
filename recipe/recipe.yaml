@@ -1,13 +1,14 @@
 context:
   name: wagtail-draftail-plugins
   version: "0.3.1"
+  python_min: "3.9"
 
 package:
-  name: wagtail-draftail-plugins
+  name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/w/wagtail-draftail-plugins/wagtail-draftail-plugins-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: 8cbd2e79d1d951f3e2753a1c80644db66cf86ddc5897caf9c69f043311e1a8de
 
 build:
@@ -18,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
     - versiontag >=1.2.0
@@ -34,7 +35,7 @@ tests:
   - requirements:
       run:
         - pip
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script: pip check
 
 about:
