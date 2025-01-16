@@ -38,7 +38,7 @@ tests:
       run:
         - pip
         - python {{ python_min }}
-  - script: pip check
+    script: pip check
 
 about:
   homepage: https://gitlab.com/thelabnyc/wagtail-draftail-plugins
