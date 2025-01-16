@@ -1,17 +1,17 @@
 context:
   name: wagtail-draftail-plugins
-  version: 0.3.0
+  version: "0.3.1"
 
 package:
   name: wagtail-draftail-plugins
   version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/w/wagtail-draftail-plugins/wagtail-draftail-plugins-${{ version }}.tar.gz
-  sha256: 45804fc6de65d92d908c4a801440eece87a084a74913c1675d151e3628d9e45b
+  url: https://pypi.io/packages/source/w/wagtail-draftail-plugins/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 8cbd2e79d1d951f3e2753a1c80644db66cf86ddc5897caf9c69f043311e1a8de
 
 build:
-  noarch: python 
+  noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -29,7 +29,7 @@ requirements:
 tests:
   - python:
       imports:
-        - wagtail_draftail_plugins 
+        - wagtail_draftail_plugins
       pip_check: true
   - requirements:
       run:
