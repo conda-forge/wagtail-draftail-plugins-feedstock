@@ -31,6 +31,7 @@ tests:
   - python:
       imports:
         - wagtail_draftail_plugins
+      python_version: ${{ python_min }}.*
       pip_check: true
   - requirements:
       run:
