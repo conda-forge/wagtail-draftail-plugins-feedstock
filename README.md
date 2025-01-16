@@ -3,11 +3,15 @@ About wagtail-draftail-plugins-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wagtail-draftail-plugins-feedstock/blob/main/LICENSE.txt)
 
-
+Home: https://gitlab.com/thelabnyc/wagtail-draftail-plugins
 
 Package license: MIT
 
 Summary: Commonly used extensions to Wagtail's Draftail editor.
+
+Development: https://gitlab.com/thelabnyc/wagtail-draftail-plugins
+
+Documentation: https://gitlab.com/thelabnyc/wagtail-draftail-plugins/-/blob/master/README.rst
 
 This library includes some commonly used extensions for the Wagtail Draftail editor.
 
