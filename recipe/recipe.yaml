@@ -1,7 +1,7 @@
 context:
   name: wagtail-draftail-plugins
-  version: "0.4.0"
-  python_min: "3.11"
+  version: 0.5.0
+  python_min: '3.11'
 
 package:
   name: ${{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: bea3fb4b05d4a09899ac01ced5723d63260005d5843298bac770500efaa869f8
+  sha256: aa231d4aae85e63ba1e8d92280425e880a3accd7bc1ce5d65436b33c17f26f3b
 
 build:
   noarch: python
@@ -24,8 +24,7 @@ requirements:
     - poetry-core
   run:
     - python >=${{ python_min }},<4.0
-    - wagtail >=5.2
-
+    - wagtail >=7.4
 tests:
   - python:
       imports:
